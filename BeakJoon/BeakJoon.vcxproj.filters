@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="snailWantClimb_2869.cpp">
+    <ClCompile Include="N-Queen_9663.cpp">
       <Filter>소스 파일\리소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
