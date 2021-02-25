@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="지름길_1446.cpp">
+    <ClCompile Include="스타링크타워_1089.cpp">
       <Filter>소스 파일\리소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
