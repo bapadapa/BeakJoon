@@ -19,8 +19,8 @@ public:
 		for (auto vowel : tmp)
 			if (word == vowel) return true;
 		return false;
-
 	}
+
 	string makePassword() {
 		string password = "";
 		for (int i = 0; i < C; i++) {
@@ -61,7 +61,6 @@ public:
 			if (charVec.at(i).first == charVec.at(i + 1).first)
 				charVec.erase(charVec.begin() + i);
 		C = charVec.size();
-
 	}
 	void solution() {
 		DFS(0, 0, 0, 0);
