@@ -15,8 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="거의 소수_1456.cpp">
-      <Filter>소스 파일\리소스 파일</Filter>
+    <ClCompile Include="분해합_2231.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

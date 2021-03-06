@@ -1,37 +1,35 @@
 //https://www.acmicpc.net/problem/1016
 
-//모르겠다... 나중에 다시 풀어보자.. 
 #include<iostream>
 #include<cmath>
 #include<vector>
+#include<algorithm>
 
 using namespace std;
-
-#define checkOverFlow(A,B) A > INT_MAX/B? -1 :1
+const long long MAX = 1000001;
 class Answer {
 private:
-	bool nums[1000001] = { false };
-	vector<int> no;
-	int min;
-	int max;
-	int cnt = 0;
+	long long A, B;
+	bool _isExponentiationNum[MAX] = { false };
 
 public:
-
-	void makeBoard() {
-		for (int i = 0; i < 1000000; i++) {
-
-		}
-
-	}
-
 	void input() {
-		cin >> min >> max;
-
+		cin >> A >> B;
+		check();
 	}
-	void solution() {
-		makeBoard();
-		cout << cnt;
+	void check() {
+		for (long long i = 2; i * i <= B; i++) {
+			long long curExponent = i * i;
+			long long _time =
+				(A / curExponent) * curExponent >= A ?
+				A / curExponent : (A / curExponent) + 1;
+			long long num = curExponent * _time;
+			while (num <= B) {
+				_isExponentiationNum[num - A] = true;
+				num += curExponent;
+			}
+		}
+		cout << count(_isExponentiationNum, _isExponentiationNum + B - A + 1, false);
 	}
 
 };
@@ -41,5 +39,5 @@ int main() {
 	ios_base::sync_with_stdio(false);
 	Answer answer;
 	answer.input();
-	answer.solution();
+
 }
